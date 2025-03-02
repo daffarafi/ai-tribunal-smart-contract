@@ -44,9 +44,9 @@ impl Contract {
     pub fn new(owner_id: AccountId) -> Self {
         Self {
             owner_id,
-            debates: UnorderedMap::new(StorageKey::Debates),
+            debates: UnorderedMap::new(b"d"),
             next_debate_id: 1,
-            votes: UnorderedMap::new(StorageKey::Votes),
+            votes: UnorderedMap::new(b"v"),
             next_vote_id: 1,
         }
     }
